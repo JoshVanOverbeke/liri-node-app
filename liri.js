@@ -78,8 +78,11 @@ else if(search === "do-what-it-says"){
         if (error) {
           return console.log(error);
         }
+        //remove quotation marks
+        dataStr = data.replace("\"", "");
+        dataStr = dataStr.replace("\"", "");
         // split text file into a search and a term
-        var dataArr = data.split(",");
+        var dataArr = dataStr.split(",");
         console.log(dataArr);
         //update term to reflect what is in the text file
         term = dataArr[1];
