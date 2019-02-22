@@ -25,6 +25,9 @@ function concertThis(){
 }
 //song search
 function spotifyThis(){
+    if (!term) {
+        term = "The Sign";
+    }
     spotify.search({ type: 'track', query: term}, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
